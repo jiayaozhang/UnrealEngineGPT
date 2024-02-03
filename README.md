@@ -30,7 +30,7 @@
 
 ## 项目简介
 
-<img src="img/333.png" width="450">
+<img src="img/buldergate.gif" width="450">
 
 **虚幻引擎对话式大语言模型** 是一个开源的虚幻引擎大语言模型项目，支持QLoRA和全量参数微调InternLM等开源模型。
 
@@ -46,9 +46,6 @@
 - 📗 开源[UEGPT系列指令微调模型权重](https://huggingface.co/YeungNLP) 。
 - 📗 在Open LLM Leaderboard上验证了QLoRA训练流程的有效性。
 
-
-## 模型评测
-**Open LLM Leaderboard和C-Eval榜单，倾向于评测大模型的做题能力，榜单成绩仅供参考，不具有全面评价各个模型的作用。**
 
 ## 安装环境
 在requirements.txt下固定了几个主要的python包的版本，执行如下脚本即可。
@@ -66,8 +63,8 @@ pip install requirements.txt
 
 | 模型                                                                             | 基座模型                                | Max Length |
 |--------------------------------------------------------------------------------|-------------------------------------|------------|
-| [InternLM-UEGPT-7b](https://huggingface.co/YeungNLP/firefly-baichuan2-13b) | baichuan-inc/Baichuan2-13B-Base     |1024     |  
-| [InternLM-UEGPT-20b](https://huggingface.co/YeungNLP/firefly-baichuan-13b)   | baichuan-inc/Baichuan-13B-Base      |1024     |  
+| [InternLM-UEGPT-7b](https://huggingface.co/YeungNLP/firefly-baichuan2-13b) | internlm/internlm-7b     |1024     |  
+| [InternLM-UEGPT-20b](https://huggingface.co/YeungNLP/firefly-baichuan-13b)   | internlm/internlm-20b      |1024     |  
 
 
 ## 训练数据
@@ -76,10 +73,8 @@ pip install requirements.txt
 | 数据集                                                                                                           | 介绍                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 
-| [moss-003-sft-data](https://huggingface.co/datasets/YeungNLP/moss-003-sft-data)                               | 由复旦大学MOSS团队开源的中英文多轮对话数据，包含100万+数据                                                                       |
-                                                                            |
-| [WizardLM_evol_instruct_V2_143k](https://huggingface.co/datasets/YeungNLP/WizardLM_evol_instruct_V2_143k) | 由WizardLM项目开源的英文指令微调数据集，通过Evol-Instruct方法让指令进化，加强指令的复杂度，以提升模型对复杂指令的遵循能力。包含143k条数据。                      |
-                                                                          |
+| [moss-003-sft-data](https://huggingface.co/datasets/YeungNLP/moss-003-sft-data)                               | 由复旦大学MOSS团队开源的中英文多轮对话数据，包含100万+数据                                                                       
+                                                                            
 
 中文模型，建议使用moss数据进行微调，效果不错。
 
@@ -107,7 +102,7 @@ pip install requirements.txt
         "assistant": "Unreal Engine（虚幻引擎）提供了一系列功能来优化渲染渲染性能，其中LOD系统（Level Of Detail，详细等级）是很重要的一部分。LOD系统是通过为在不同距离上观察的对象提供不同的细节层次，从而优化渲染性能。\n\nLOD 系统如何影响渲染性能：\n\n1. **模型复杂度降低**：当物体距离摄像机较远时，渲染器会选择使用更低细节的模型。这些模型通常拥有较少的顶点和面片，从而减少了GPU的负担。\n\n2. **渲染调用减少**：如果多个远处物体使用相同的LOD层级，可以将它们的绘制调用合并为单次调用，从而降低CPU负担。\n\n3. **纹理贴图和材质复杂度降低**：与模型类似，远处物体也可以使用更低分辨率的纹理和简化的材质，这进一步降低了显存的使用量和纹理采样的性能消耗。\n\n4. **影子及反射代理**：面向远距离物体时，可以采用更低分辨率的影子贴图（Shadow Maps）和反射代理（Reflection Probes），从而达到性能节省的目的。\n\n5. **发卡负载均衡**：通过根据摄像机的视角和距离自动调整模型的细节级别，LOD系统可以在不牺牲太多视觉效果的情况下对发卡负载进行均衡。\n\n6. **流畅的视觉体验**：设置不同LOD阈值可以在性能和视觉质量之间取得平衡。当玩家在游戏中移动时，通过平滑的转换来确保不会有突变的视觉变化。\n\n为了最大化渲染的性能，通常需要对物体进行LOD的设置，确保在视觉效果可接受的前提下最小化性能的消耗。Unreal Engine 提供了自动和手动创建LOD的工具，开发者可以根据项目的需要来设定不同级别的LOD，以获得最佳的性能和视觉效果。"
      }
     ]
-  },
+  }
 ```
 
 
@@ -155,9 +150,8 @@ deepspeed --num_gpus={num_gpus} train.py --train_args_file train_args/sft.json
 - fp16：使用使用fp16混合精度。V100建议开启。
 - bf16：使用使用bf16混合精度。A100建议开启。
 
-firefly-bloom-2b6-v2的训练损失的变化趋势如下图所示：
 
-<img src="img/222.png" width="450"> 
+<img src="img/Zelda.gif" width="450"> 
 
 ### QLoRA微调
 
@@ -245,7 +239,7 @@ python single_chat.py
 
 😎Stay tune!
 
-<img src="img/666.png" width="450"> 
+<img src="img/metahuman.gif" width="450"> 
 
 
 
