@@ -82,7 +82,7 @@ def main():
         response_ids = outputs[:, model_input_ids_len:]
         history_token_ids = torch.concat((history_token_ids, response_ids.cpu()), dim=1)
         response = tokenizer.batch_decode(response_ids)
-        print("Link：" + response[0].strip().replace(tokenizer.eos_token, ""))
+        print("UEGPT：" + response[0].strip().replace(tokenizer.eos_token, ""))
         user_input = input('User：')
 
 

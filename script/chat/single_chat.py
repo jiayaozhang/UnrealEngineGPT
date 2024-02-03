@@ -66,7 +66,7 @@ def main():
         outputs = outputs.tolist()[0][len(input_ids[0]):]
         response = tokenizer.decode(outputs)
         response = response.strip().replace(tokenizer.eos_token, "").strip()
-        print("Firefly：{}".format(response))
+        print("UEGPT：{}".format(response))
         text = input('User：')
 
 
