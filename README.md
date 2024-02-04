@@ -4,7 +4,9 @@
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/jiayaozhang/UnrealEngineGPT?style=social)
 [![Generic badge](https://img.shields.io/badge/🤗-Huggingface%20Repo-green.svg)](https://huggingface.co/Jiayao)
-[![Generic badge](https://img.shields.io/badge/🔥-Modelscope-white)](https://www.modelscope.cn/profile/Jannie)
+[![Generic badge](https://img.shields.io/badge/🔥-Modelscope-red)](https://www.modelscope.cn/profile/Jannie)
+[![Generic badge](https://img.shields.io/badge/🐼-OpenXlab-blue)](https://openxlab.org.cn/apps/detail/Janice/UnrealGPT)
+
 
 </div>
 
