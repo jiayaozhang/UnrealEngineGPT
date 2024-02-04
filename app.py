@@ -20,8 +20,8 @@ st.caption("🚀 A streamlit chatbot powered by InternLM2 QLora")
 
 # 定义模型路径
 
-model_id = 'Jannie/UEGPT-internlm-20b-qlora-sft-merge'
-
+# model_id = 'Jannie/UEGPT-internlm-20b-qlora-sft-merge'
+model_id ='Jannie/UEGPT-internlm-7b-qlora-sft-merge'
 mode_name_or_path = snapshot_download(model_id, revision='master')
 
 # mode_name_or_path = '/root/Firefly/Firefly/checkpoint/UEGPT-internlm-20b-qlora-sft-merge'
