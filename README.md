@@ -3,9 +3,9 @@
 <div align="left">
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/jiayaozhang/UnrealEngineGPT?style=social)
-[![Generic badge](https://img.shields.io/badge/🤗-Huggingface%20Repo-green.svg)](https://huggingface.co/YeungNLP)
+[![Generic badge](https://img.shields.io/badge/🤗-Huggingface%20Repo-green.svg)](https://huggingface.co/Jiayao)
+[![Generic badge](https://img.shields.io/badge/🔥-Modelscope-white)](https://www.modelscope.cn/profile/Jannie)
 
-[//]: # ([![Generic badge]&#40;https://img.shields.io/badge/微信-Firefly-brightgreen?logo=wechat&#41;]&#40;./pics/wechat.jpeg&#41;)
 </div>
 
 <img src="img/111.png" width="450" >
@@ -13,13 +13,18 @@
 欢迎加入虚幻引擎大模型的学习🤗。
 
 
+## News: 😎 开源模型
 
-## News
+**在1/2*V100上进行训练**，经过中文词表扩充、增量预训练、多轮指令微调。该项目也支持对Baichuan、Qwen、InternLM、LLaMA、Falcon等模型进行高效增量预训练。
+🔔 使用本项目的训练代码，以及上述训练数据，我们训练并开源了以下模型。
 
-- 😎 开源[UEGPT-Datasets](https://huggingface.co/YeungNLP/firefly-baichuan2-13b)。
-- 😎 开源[UEGPT-internLM2-20b](https://github.com/yangjianxin1/Firefly-LLaMA2-Chinese)，**在1/2*V100上进行训练**，经过中文词表扩充、增量预训练、多轮指令微调。该项目也支持对Baichuan、Qwen、InternLM、LLaMA、Falcon等模型进行高效增量预训练。
-- 😎 开源[UEGPT-internLM2-7b](https://huggingface.co/YeungNLP/firefly-baichuan2-13b)。
+中文模型：
 
+| 模型                                                                             | Huggingface                                | Modelscope|
+|--------------------------------------------------------------------------------|-------------------------------------|------------|
+| InternLM-UEGPT-7b    | [Huggingface-internLM2-7b](https://huggingface.co/Jiayao/UEGPT-internlm-7b-qlora-sft-merge/tree/main)  | [UEGPT-internLM2-7b](https://www.modelscope.cn/models/Jannie/UEGPT-internlm-7b-qlora-sft-merge/files) |  
+| InternLM-UEGPT-20b   | [Huggingface-internLM2-20b](https://huggingface.co/Jiayao/UnrealGPT-internlm-20b-qlora-sft-merge) | [Modelscope-internLM2-20b](https://www.modelscope.cn/models/Jannie/UEGPT-internlm-20b-qlora-sft-merge/files)|  
+| UEGPT-Datasets       | [Huggingface-UEGPT-Datasets](https://huggingface.co/datasets/Jiayao/UEGPT-Datasets)     |[Modelscope-UEGPT-Datasets](https://www.modelscope.cn/datasets/Jannie/UEGPT-Datasets/files)     |  
 
 ## 相关项目
 
@@ -42,8 +47,8 @@
 - 📗 支持全量参数指令微调、QLoRA低成本高效指令微调、其中QLoRA是我们主推的一种高效的训练方式。
 - 📗 支持绝大部分主流的开源大模型，如Baichuan2、CodeLLaMA、LLaMA2、LLaMA、Qwen、Baichuan、ChatGLM2、InternLM、Ziya、Bloom、XVERSE等。
 - 📗 支持lora与base model进行权重合并，推理更便捷。
-- 📗️ 模型裁剪：通过[LLMPruner：大语言模型裁剪工具](https://github.com/yangjianxin1/LLMPruner) ，开源[裁剪后的Bloom模型权重](https://huggingface.co/YeungNLP) 。在保留预训练中文知识的前提下，有效减少模型参数量，降低训练成本，提高训练效率。
-- 📗 开源[UEGPT系列指令微调模型权重](https://huggingface.co/YeungNLP) 。
+- 📗️ 模型裁剪：通过[LLMPruner：大语言模型裁剪工具](https://github.com/yangjianxin1/LLMPruner) ，开源[裁剪后的Bloom模型权重](https://huggingface.co/Jiayao) 。在保留预训练中文知识的前提下，有效减少模型参数量，降低训练成本，提高训练效率。
+- 📗 开源[UEGPT系列指令微调模型权重](https://huggingface.co/Jiayao) 。
 - 📗 在Open LLM Leaderboard上验证了QLoRA训练流程的有效性。
 
 
@@ -55,7 +60,7 @@
 pip install requirements.txt
 ```
 
-## 模型列表
+<!-- ## 模型列表
 
 🔔 使用本项目的训练代码，以及上述训练数据，我们训练并开源了以下模型。
 
@@ -64,22 +69,20 @@ pip install requirements.txt
 | 模型                                                                             | 基座模型                                | Max Length |
 |--------------------------------------------------------------------------------|-------------------------------------|------------|
 | [InternLM-UEGPT-7b](https://huggingface.co/YeungNLP/firefly-baichuan2-13b) | internlm/internlm-7b     |1024     |  
-| [InternLM-UEGPT-20b](https://huggingface.co/YeungNLP/firefly-baichuan-13b)   | internlm/internlm-20b      |1024     |  
+| [InternLM-UEGPT-20b](https://huggingface.co/YeungNLP/firefly-baichuan-13b)   | internlm/internlm-20b      |1024     |   -->
 
 
 ## 训练数据
-🔔 目前本项目参考复旦大学MOSS团队开源的中英文多轮对话数据统一的数据格式,整理了上千条虚幻引擎问答多轮数据对话：
-
-| 数据集                                                                                                           | 介绍                                                                                                      |
-|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 
 | [moss-003-sft-data](https://huggingface.co/datasets/YeungNLP/moss-003-sft-data)                               | 由复旦大学MOSS团队开源的中英文多轮对话数据，包含100万+数据                                                                       
                                                                             
+🔔 目前本项目参考复旦大学MOSS团队开源的中英文多轮对话数据统一的数据格式,整理了上千条虚幻引擎问答多轮数据对话：
 
-中文模型，建议使用moss数据进行微调，效果不错。
 
 训练数据为jsonl格式，每一行的数据格式如下，其中conversation字段是必需的，可以根据实际需求添加或删除其他字段。
 可以参考项目中的data/dummy_data.jsonl文件。
+
+
 ```json
   {
     "conversation_id": 390,
@@ -206,28 +209,38 @@ python single_chat.py
 
 下面的样例均为UEGPT-InternLM2-20b模型所生成，未经修改，仅供参考。
 
+<img src="img/fortnite.gif" width="450"> 
+
 
 </details>
 <details><summary><b>Nanite Virtual Geometry</b></summary>
+<img src="img/nanite.png" width="450"> 
+
+
 
 </details>
 
 <details><summary><b>Lumen illumination</b></summary>
+<img src="img/lumen.png" width="450"> 
 
 
 </details>
 
 <details><summary><b>Physics Chaos</b></summary>
+<img src="img/Physics.png" width="450"> 
+
 
 </details>
 
 
-<details><summary><b>VR & AR</b></summary>
+<details><summary><b>地形解决方案</b></summary>
+<img src="img/Landscape.png" width="450"> 
 
 </details>
 
 
 <details><summary><b>Toolchains</b></summary>
+<img src="img/python.png" width="450"> 
 
 
 </details>
