@@ -1,4 +1,4 @@
-# UnrealEngineGPT: Unreal Engine Conversational Large Language Model
+# UnrealEngineGPT: 虚幻引擎对话式大语言模型
 
 <div align="left">
 
@@ -12,54 +12,52 @@
 
 <img src="img/111.png" width="450" >
 
-Welcome to join the learning of Unreal Engine large model
-
-* 🤗[Chinese Tutorial](README_CN.md)
+欢迎加入虚幻引擎大模型的学习🤗。
 
 
-## News: 😎 Open source model
+## News: 😎 开源模型
 
-**Training on 1/2*V100**，After Chinese word list expansion, incremental pre-training, and multiple rounds of instruction fine-tuning. The project also supports efficient incremental pre-training of Baichuan, Qwen, InternLM, LLaMA, Falcon and other models.
-🔔Using the training code of this project, and the above training data, we trained and open sourced the following model.
+**在1/2*V100上进行训练**，经过中文词表扩充、增量预训练、多轮指令微调。该项目也支持对Baichuan、Qwen、InternLM、LLaMA、Falcon等模型进行高效增量预训练。
+🔔 使用本项目的训练代码，以及上述训练数据，我们训练并开源了以下模型。
 
-Models：
+中文模型：
 
-| Models                                                                             | Huggingface                                | Modelscope|
+| 模型                                                                             | Huggingface                                | Modelscope|
 |--------------------------------------------------------------------------------|-------------------------------------|------------|
 | InternLM-UEGPT-7b    | [Huggingface-internLM2-7b](https://huggingface.co/Jiayao/UEGPT-internlm-7b-qlora-sft-merge/tree/main)  | [UEGPT-internLM2-7b](https://www.modelscope.cn/models/Jannie/UEGPT-internlm-7b-qlora-sft-merge/files) |  
 | InternLM-UEGPT-20b   | [Huggingface-internLM2-20b](https://huggingface.co/Jiayao/UnrealGPT-internlm-20b-qlora-sft-merge) | [Modelscope-internLM2-20b](https://www.modelscope.cn/models/Jannie/UEGPT-internlm-20b-qlora-sft-merge/files)|  
 | UEGPT-Datasets       | [Huggingface-UEGPT-Datasets](https://huggingface.co/datasets/Jiayao/UEGPT-Datasets)     |[Modelscope-UEGPT-Datasets](https://www.modelscope.cn/datasets/Jannie/UEGPT-Datasets/files)     |  
 
-## Related projects
+## 相关项目
 
 | Project                                                                                        | Description                                                                                    |
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| [InternLM Notes](https://github.com/jiayaozhang/InternLM_Notes)  | RAG retrieval enhanced generation supports the use of QLoRA incremental pre-training for large model inference optimization, large model parameter efficient fine-tuning (PEFT), and large model context expansion.|
-| [LongQLoRA](https://github.com/yangjianxin1/LongQLoRA) | Large model length extension project can extend the length of LLaMA-13B to 8192 on a single card V100, and the performance is close to MPT-8K                                            |
+| [InternLM Notes](https://github.com/jiayaozhang/InternLM_Notes)  | RAG检索增强生成，支持使用QLoRA增量预训练大模型推理优化、大模型参数高效微调（PEFT）、大模型上下文扩展|
+| [LongQLoRA](https://github.com/yangjianxin1/LongQLoRA) | 大模型长度扩展项目，可在单卡V100上将LLaMA-13B的长度扩展至8192，且性能逼近MPT-8K                                            |
 
-## Project Description
+## 项目简介
 
 <img src="img/buldergate.gif" width="450">
 
-**Unreal Engine Conversational Large Language Model** is an open source Unreal Engine large language model project that supports open source models such as QLoRA and full parameter fine-tuning InternLM.
+**虚幻引擎对话式大语言模型** 是一个开源的虚幻引擎大语言模型项目，支持QLoRA和全量参数微调InternLM等开源模型。
 
-As the name of the project suggests, I hope this project can do its part for the Unreal Engine community and promote the development of games and game engines.
-If your training resources are limited, we highly recommend using QLoRA’s instruction fine-tuning method because we have verified the effectiveness of this method on the Open LLM Leaderboard.
-
-
-🔔 The main contents of this project are as follows：
-- 📗 It supports full parameter instruction fine-tuning and QLoRA low-cost and efficient instruction fine-tuning. Among them, QLoRA is an efficient training method that we mainly recommend.
-- 📗 Supports most mainstream open source large models, such as Baichuan2, CodeLLaMA, LLaMA2, LLaMA, Qwen, Baichuan, ChatGLM2, InternLM, Ziya, Bloom, XVERSE, etc.
-- 📗 Supports weight merging of lora and base model, making reasoning more convenient.
-- 📗️ Model cropping：[By LLMPruner: Large Language Model Clipping Tool](https://github.com/yangjianxin1/LLMPruner) ，[Open source tailored Bloom model weights](https://huggingface.co/Jiayao) On the premise of retaining pre-trained Chinese knowledge, the amount of model parameters is effectively reduced, training costs are reduced, and training efficiency is improved.
-- 📗 Open source[UEGPT series instructions to fine-tune model weights](https://huggingface.co/Jiayao) 。
-- 📗 The effectiveness of the QLoRA training process was verified on the Open LLM Leaderboard.
+正如项目名称一样，希望本项目能够为为虚幻引擎社区尽绵薄之力，促进游戏以及游戏引擎的发展。
+如果你的训练资源有限，我们极力推荐使用QLoRA的指令微调方式，因为我们在Open LLM Leaderboard上验证了该方法的有效性。
 
 
-## Installation Environment
-The versions of several major python packages are fixed under requirements.txt. Just execute the following script.
+🔔 本项目主要内容如下：
+- 📗 支持全量参数指令微调、QLoRA低成本高效指令微调、其中QLoRA是我们主推的一种高效的训练方式。
+- 📗 支持绝大部分主流的开源大模型，如Baichuan2、CodeLLaMA、LLaMA2、LLaMA、Qwen、Baichuan、ChatGLM2、InternLM、Ziya、Bloom、XVERSE等。
+- 📗 支持lora与base model进行权重合并，推理更便捷。
+- 📗️ 模型裁剪：通过[LLMPruner：大语言模型裁剪工具](https://github.com/yangjianxin1/LLMPruner) ，开源[裁剪后的Bloom模型权重](https://huggingface.co/Jiayao) 。在保留预训练中文知识的前提下，有效减少模型参数量，降低训练成本，提高训练效率。
+- 📗 开源[UEGPT系列指令微调模型权重](https://huggingface.co/Jiayao) 。
+- 📗 在Open LLM Leaderboard上验证了QLoRA训练流程的有效性。
 
-**Attention：we are training based on torch==1.13**
+
+## 安装环境
+在requirements.txt下固定了几个主要的python包的版本，执行如下脚本即可。
+
+**注意：Baichuan2需要安装pytorch 2.0。除Baichuan2以外，其他模型的训练，我们均在torch==1.13上进行训练。**
 ```bash
 pip install requirements.txt
 ```
@@ -76,15 +74,15 @@ pip install requirements.txt
 | [InternLM-UEGPT-20b](https://huggingface.co/YeungNLP/firefly-baichuan-13b)   | internlm/internlm-20b      |1024     |   -->
 
 
-## Training Datasets
+## 训练数据
 
-| [moss-003-sft-data](https://huggingface.co/datasets/YeungNLP/moss-003-sft-data)                               | Chinese and English multi-round dialogue data open sourced by the MOSS team of Fudan University, containing 1 million+ data                                                                       
+| [moss-003-sft-data](https://huggingface.co/datasets/YeungNLP/moss-003-sft-data)                               | 由复旦大学MOSS团队开源的中英文多轮对话数据，包含100万+数据                                                                       
                                                                             
-🔔 Currently, this project refers to the unified data format of Chinese and English multi-round dialogue data open sourced by the MOSS team of Fudan University, and has compiled thousands of Unreal Engine Q&A multi-round data dialogues:
+🔔 目前本项目参考复旦大学MOSS团队开源的中英文多轮对话数据统一的数据格式,整理了上千条虚幻引擎问答多轮数据对话：
 
 
-The training data is in jsonl format. The data format of each row is as follows. The conversation field is required and other fields can be added or deleted according to actual needs.
-You can refer to the `data/dummy_data.jsonl` file in the project.
+训练数据为jsonl格式，每一行的数据格式如下，其中conversation字段是必需的，可以根据实际需求添加或删除其他字段。
+可以参考项目中的data/dummy_data.jsonl文件。
 
 
 ```json
@@ -115,110 +113,108 @@ You can refer to the `data/dummy_data.jsonl` file in the project.
 
 
 
-## Training process
+## 模型训练
 
 <img src="img/444.png" width="450"> 
 
 
-Currently, full parameter command fine-tuning and QLoRA command fine-tuning are supported. We extract various components used in training for subsequent expansion and optimization. For details, see the implementation in the component directory. Parameter configuration during training is stored in the train_args directory to facilitate unified management and changes. You can view the training configurations of different models in the train_args directory.
+目前支持全量参数指令微调、QLoRA指令微调。我们将训练中使用的各种组件抽取出来，以便后续的扩展和优化，详见component目录下的实现。训练时的参数配置存储在train_args目录下，方便统一管理和更改。大家可以在train_args目录下查看不同模型的训练配置。
 
-### Data formats
-During training, we splice multiple rounds of dialogue into the following format and then tokenize. In this process, <s\>represents bos_token，</s\>represents eos_token。
+### 数据格式
+训练时，我们将多轮对话拼接成如下格式，然后进行tokenize。其中<s\>表示bos_token，</s\> 表示eos_token。
 ```
 <s>input1</s>target1</s>input2</s>target2</s>...
 ```
+在计算loss时，我们通过mask的方式，input部分的loss不参与参数更新，只有“target</s>”部分的loss参与参数更新。
+这种方式充分利用了模型并行计算的优势，训练更加高效，且多轮对话中的每个target部分都参与了训练，训练更充分。
+否则，就需要把一个n轮对话，拆分成n条数据，且只计算最后一个target的loss，大大降低了训练效率。
 
-When calculating loss, we use mask. The loss in the input part does not participate in parameter update. Only the loss in the "target" part participates in parameter update. This method makes full use of the advantages of parallel computing of the model, making the training more efficient, and each target part in the multi-round dialogue participates in the training, making the training more complete. Otherwise, it is necessary to split an n-round conversation into n pieces of data, and only calculate the loss of the last target, which greatly reduces the training efficiency.
-
-
-### Full parameter fine-tuning
-💻 Execute the following command to fine-tune all parameters:
+### 全量参数微调
+💻 执行如下命令即可进行全量参数微调：
 ```bash
 deepspeed --num_gpus={num_gpus} train.py --train_args_file train_args/sft.json
 ```
 
-📝 train_args/sft.json. The main parameters are described as follows. The following parameters can be modified according to needs. It is recommended not to modify other parameters:
-
-- output_dir：Training output directory，store checkpoint、tokenizer、tensorboard
-- model_name_or_path：The local directory of the pretrained model, or the model name on huggingface.
-- train_file：Training data set path. You can use data/dummy_data.jsonl for debugging.
-- num_train_epochs：Training rounds. If the amount of data is large enough, it is generally recommended to train for only one epoch.
-- per_device_train_batch_size：The batch size of each graphics card.
-- gradient_accumulation_steps：Gradient cumulative steps. global batch=num_gpus * per_device_train_batch_size * gradient_accumulation_steps。
-- gradient_checkpointing：If the memory is tight, you can turn it on. Trading time for space, the model does not cache activation status and performs two forward calculations to save memory.
-- learning_rate：learning rate. When fine-tuning all parameters, it is recommended to be smaller, 1e-5 or 5e-6.
-- max_seq_length：Maximum length during training. Set it according to your own device. The longer it is, the more video memory it will take up.
-- logging_steps：Train loss is counted every few steps.
-- save_steps：How many steps to save a model.
-- save_total_limit：The maximum number of checkpoints can be saved in the output_dir directory. If the checkpoint is exceeded, the oldest one will be deleted.
-- lr_scheduler_type：Learning rate change strategy.
-- warmup_steps：Warm up steps. How many steps does the learning rate take to increase to the specified value.
-- optim：Optimizer. If it is full parameter fine-tuning, it is recommended to use adamw_hf.
-- seed：Random seeds are used to reproduce experimental results.
-- fp16：Use fp16 mixed precision. V100 is recommended to be turned on.
-- bf16：Use bf16 mixed precision. A100 is recommended to be turned on.
+📝 train_args/sft.json中的主要参数说明如下，以下参数可以根据需求进行修改，其他参数建议不做修改：
+- output_dir：训练输出目录，存储checkpoint、tokenizer、tensorboard等
+- model_name_or_path：预训练模型的本地目录，或者在huggingface上的模型名称。
+- train_file：训练数据集路径。可以使用data/dummy_data.jsonl进行debug。
+- num_train_epochs：训练的轮次。如果数据量足够大，一般建议只训一个epoch。
+- per_device_train_batch_size：每张显卡的batch size。
+- gradient_accumulation_steps：梯度累计步数。global batch=num_gpus * per_device_train_batch_size * gradient_accumulation_steps。
+- gradient_checkpointing：如果显存捉襟见肘，可以开启。以时间换空间，模型不缓存激活状态，会进行两次forward计算，以节省显存。
+- learning_rate：学习率。全量参数微调的时候，建议小一些，1e-5或5e-6。
+- max_seq_length：训练时的最大长度。按照自己的设备进行设置，越长需要占用越多显存。
+- logging_steps：每隔多少步统计一次train loss。
+- save_steps：每隔多少步保存一个模型。
+- save_total_limit：output_dir目录中最多保存多少个checkpoint，超出则会将最旧的删除。
+- lr_scheduler_type：学习率变化策略。
+- warmup_steps：warm up步数。学习率经过多少步，增长到指定的数值。
+- optim：优化器。如果是全量参数微调，建议使用adamw_hf。
+- seed：随机种子，用于复现实验结果。
+- fp16：使用使用fp16混合精度。V100建议开启。
+- bf16：使用使用bf16混合精度。A100建议开启。
 
 
 <img src="img/Zelda.gif" width="450"> 
 
-### QLoRA fine-tuning
+### QLoRA微调
 
-For a detailed introduction to QLoRA, please refer to the article:[【QLoRA实战】使用单卡高效微调bloom-7b1，效果惊艳](https://mp.weixin.qq.com/s/DED7yeiE0DibsVzTmMeDOw)
+关于QLoRA的详细介绍可参考文章：[【QLoRA实战】使用单卡高效微调bloom-7b1，效果惊艳](https://mp.weixin.qq.com/s/DED7yeiE0DibsVzTmMeDOw)
 
-QLoRA uses 4-bit nf4 quantization and adds more adapters to greatly reduce memory consumption while approaching the effect of full parameter fine-tuning as much as possible.
-The QLoRA paper points out that this method can fine-tune a 33B model on a V100, and the performance is close to full parameter fine-tuning.
+QLoRA通过4-bit的nf4量化，且加入更多adapter，在大幅减少显存消耗的同时，尽可能逼近全量参数微调的效果。
+QLoRA论文指出，该方法可以在一张V100上对33B的模型进行微调，并且性能逼近全量参数微调。
 
-We use qlora on bloom-7b1. The number of parameters of the adapter is about 120 million, which exceeds the number of parameters of the bert-base model. It can be trained on V100 with a length of 1024.
+我们在bloom-7b1上使用qlora，adapter的参数量约1.2亿，超过bert-base模型参数量，可以在V100上使用1024的长度进行训练。
 
-💻 When using a single card, it is recommended to use this python command to start the script:
+💻 单卡时建议使用python命令启动脚本：
 ```bash
 python train_qlora.py --train_args_file train_args/qlora/baichuan-7b-sft-qlora.json
 ```
 
-💻 When using multiple cards, use the torchrun command to start the script:
+💻 多卡时使用torchrun命令启动脚本：
 ```bash
 torchrun --nproc_per_node={num_gpus} train_qlora.py --train_args_file train_args/qlora/baichuan-7b-sft-qlora.json
 ```
 
-📝 The main parameters in train_args/sft-qlora.json are described as follows, which are basically the same as the parameters for full fine-tuning, with a few special ones:
-- lora_rank：The rank of the qlora matrix. Generally set to 8, 16, 32, 64, etc., the author set it to 64 in the qlora paper. The larger the value, the greater the number of parameters involved in training. Generally speaking, the effect will be better, but more video memory is required.
-- lora_alpha: Scaling parameters in qlora. Generally, it can be set to 16 or 32.
-- lora_dropout: The dropout rate of lora weight.
-- learning_rate：The learning rate setting in qlora is larger, generally 1e-4, 2e-4.
+📝 train_args/sft-qlora.json中的主要参数说明如下，基本与全量微调的参数一致，几个较为特殊：
+- lora_rank：qlora矩阵的秩。一般设置为8、16、32、64等，在qlora论文中作者设为64。越大则参与训练的参数量越大，一般来说效果会更好，但需要更多显存，。
+- lora_alpha: qlora中的缩放参数。一般设为16、32即可。
+- lora_dropout: lora权重的dropout rate。
+- learning_rate：qlora中的学习率设置更大一些，一般为1e-4、2e-4。
 
 <img src="img/555.png" width="450"> 
 
-## Model usage
+## 模型使用
 
-### weight merging
+### 权重合并
+如果使用LoRA或者QLoRA进行训练，本项目仅保存adapter的权重和配置文件，需要将adapter权重与base model进行合并。脚本见script/merge_lora.py
 
-If you use LoRA or QLoRA for training, this project only saves the weights and configuration files of the adapter, and you need to merge the adapter weights with the base model. For the script, see script/merge_lora.py
-
-### Model reasoning
-We provide scripts for single-round dialogue and multi-round dialogue. Please see the script/chat directory for details. This script is compatible with all models trained in this project for inference and is not suitable for models not trained in this project.
+### 模型推理
+我们提供了单轮对话和多轮对话的脚本，详见script/chat目录，该脚本可同时兼容本项目训练的所有模型进行推理，不适用于非本项目训练的模型。
 ```bash
 cd script/chat
 python single_chat.py
 ```
 
-The `top_p, temperature, repetition_penalty, do_sample` and other parameters in the generation script have a great impact on the generation effect of the model, and can be debugged and modified according to your own usage scenarios.
+生成脚本中的top_p、temperature、repetition_penalty、do_sample等参数对模型的生成效果影响较大，可按照自己的使用场景进行调试修改。
 
-The inference script supports the use of base model and adapter for inference. The disadvantage is that each time the script is started, the weights need to be merged, which takes a long time.
+推理脚本中支持使用base model和adapter进行推理，缺点是每次启动脚本都需要合并一次权重，等待时间较久。
 
-Supports the use of 4bit for inference, low memory requirements, and the effect will be slightly reduced.
+支持使用4bit进行推理，显存要求低，效果会略有下降。
 
-### Service deployment
-This project supports deploying the model as an HTTP service. The script is under script/http and developed using flask. start_service.py is to start the service, and post is to send the request, which can be modified as needed.
+### 服务部署
+本项目支持将模型部署成HTTP服务，脚本在script/http下，使用flask进行开发。start_service.py为启动服务，post为发送请求，可按需进行修改。
 
 
-## Generate effects
+## 生成效果
 
-The following examples are generated by the UEGPT-InternLM2-20b model and are not modified and are for reference only.
+下面的样例均为UEGPT-InternLM2-20b模型所生成，未经修改，仅供参考。
 
 <img src="img/fortnite.gif" width="450"> 
 
 
-<details><summary><b>Unreal Engine Basis</b></summary>
+<details><summary><b>虛幻引擎基础</b></summary>
 <img src="img/UE.png" width="450"> 
 </details>
 
@@ -244,7 +240,7 @@ The following examples are generated by the UEGPT-InternLM2-20b model and are no
 </details>
 
 
-<details><summary><b>Landscape Solutions</b></summary>
+<details><summary><b>地形解决方案</b></summary>
 <img src="img/Landscape.png" width="450"> 
 
 </details>
@@ -257,12 +253,14 @@ The following examples are generated by the UEGPT-InternLM2-20b model and are no
 
 
 
-## Large Languages Models with Unreal Engine 
+## InternLM大模型与虚幻引擎在线结合
+
+后期把虚幻引擎和UEGPT-Chat大模型联合，可以实时与"我的秘书"语音对话，之后会把虚幻的项目工程放出来
 
 😎Stay tune!
 
 <img src="img/metahuman.gif" width="450"> 
 
-## 
+
 
 
