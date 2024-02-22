@@ -1,0 +1,9 @@
+{
+	"SourceFiles": [
+		"D:\\openai\\UnrealEngineGPT\\ChatWithTextures\\Source\\MyProject\\MyProject.Build.cs",
+		"D:\\openai\\UnrealEngineGPT\\ChatWithTextures\\Plugins\\ComfyTextures\\Source\\ComfyTextures\\ComfyTextures.Build.cs",
+		"D:\\openai\\UnrealEngineGPT\\ChatWithTextures\\Source\\MyProject.Target.cs",
+		"D:\\openai\\UnrealEngineGPT\\ChatWithTextures\\Source\\MyProjectEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}

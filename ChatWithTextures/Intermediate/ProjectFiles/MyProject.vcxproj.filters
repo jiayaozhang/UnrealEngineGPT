@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\MyProject.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\MyProject.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\MyProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ComfyTextures">
+      <UniqueIdentifier>{EF624F6A-3C58-384D-9D8E-2C6B78DCEB7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ComfyTextures\Source">
+      <UniqueIdentifier>{38C85B00-6582-32DA-B263-D5053A276E3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ComfyTextures\Source\ComfyTextures">
+      <UniqueIdentifier>{32C5E37E-3566-35AF-BCC7-DB7946AB92BE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ComfyTextures\Source\ComfyTextures\ComfyTextures.Build.cs">
+      <Filter>Plugins\ComfyTextures\Source\ComfyTextures</Filter>
+    </None>
+    <Filter Include="Plugins\ComfyTextures\Source\ComfyTextures\Private">
+      <UniqueIdentifier>{3C758C84-27A2-3D60-ACF3-98A7823ED1FC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\ComfyTextures\Source\ComfyTextures\Private\ComfyTextures.cpp">
+      <Filter>Plugins\ComfyTextures\Source\ComfyTextures\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\ComfyTextures\Source\ComfyTextures\Private\ComfyTexturesHttpClient.cpp">
+      <Filter>Plugins\ComfyTextures\Source\ComfyTextures\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\ComfyTextures\Source\ComfyTextures\Private\ComfyTexturesHttpClient.h">
+      <Filter>Plugins\ComfyTextures\Source\ComfyTextures\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Plugins\ComfyTextures\Source\ComfyTextures\Private\ComfyTexturesWidgetBase.cpp">
+      <Filter>Plugins\ComfyTextures\Source\ComfyTextures\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\ComfyTextures\Source\ComfyTextures\Public">
+      <UniqueIdentifier>{82F52F76-2273-39E1-866F-ED3C2B26E0D2}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\ComfyTextures\Source\ComfyTextures\Public\ComfyTextures.h">
+      <Filter>Plugins\ComfyTextures\Source\ComfyTextures\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\ComfyTextures\Source\ComfyTextures\Public\ComfyTexturesWidgetBase.h">
+      <Filter>Plugins\ComfyTextures\Source\ComfyTextures\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\ComfyTextures\ComfyTextures.uplugin">
+      <Filter>Plugins\ComfyTextures</Filter>
+    </None>
+    <Filter Include="Plugins\ComfyTextures\Resources">
+      <UniqueIdentifier>{4F0E7DE1-D551-39DD-9D7E-AC358F2977AE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ComfyTextures\Resources\dream.png">
+      <Filter>Plugins\ComfyTextures\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\ComfyTextures\Resources\Icon128.png">
+      <Filter>Plugins\ComfyTextures\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\ComfyTextures\Resources\Icon1281.png">
+      <Filter>Plugins\ComfyTextures\Resources</Filter>
+    </None>
+    <Filter Include="Source\MyProject">
+      <UniqueIdentifier>{E24959B1-EBAF-399D-9D3A-65ADD2D94AF5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\MyProject\MyProject.Build.cs">
+      <Filter>Source\MyProject</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\MyProject\MyProject.cpp">
+      <Filter>Source\MyProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject\MyProject.h">
+      <Filter>Source\MyProject</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

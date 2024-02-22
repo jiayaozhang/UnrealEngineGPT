@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ProjectReference Include="Android\Android.Automation.csproj" />
+    <ProjectReference Include="Apple\Apple.Automation.csproj" />
+    <ProjectReference Include="AutomationUtils\AutomationUtils.Automation.csproj" />
+    <ProjectReference Include="BuildGraph\BuildGraph.Automation.csproj" />
+    <ProjectReference Include="CookedEditor\CookedEditor.Automation.csproj" />
+    <ProjectReference Include="CrowdinLocalization\CrowdinLocalization.Automation.csproj" />
+    <ProjectReference Include="Gauntlet\Gauntlet.Automation.csproj" />
+    <ProjectReference Include="IOS\IOS.Automation.csproj" />
+    <ProjectReference Include="Linux\Linux.Automation.csproj" />
+    <ProjectReference Include="Localization\Localization.Automation.csproj" />
+    <ProjectReference Include="LowLevelTests\LowLevelTests.Automation.csproj" />
+    <ProjectReference Include="Mac\Mac.Automation.csproj" />
+    <ProjectReference Include="OneSkyLocalization\OneSkyLocalization.Automation.csproj" />
+    <ProjectReference Include="Scripts\AutomationScripts.Automation.csproj" />
+    <ProjectReference Include="SmartlingLocalization\SmartlingLocalization.Automation.csproj" />
+    <ProjectReference Include="SteamDeck\SteamDeck.Automation.csproj" />
+    <ProjectReference Include="TVOS\TVOS.Automation.csproj" />
+    <ProjectReference Include="Turnkey\Turnkey.Automation.csproj" />
+    <ProjectReference Include="Win\Win.Automation.csproj" />
+    <ProjectReference Include="XLocLocalization\XLocLocalization.Automation.csproj" />
+  </ItemGroup>
+</Project>
