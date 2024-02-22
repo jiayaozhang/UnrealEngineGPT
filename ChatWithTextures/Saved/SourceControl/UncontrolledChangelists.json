@@ -1,0 +1,14 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/best/Downloads/ComfyTextures/Plugins/ComfyTextures/Content/ChatWithTextures.uasset",
+				"C:/Users/best/Downloads/ComfyTextures/Plugins/ComfyTextures/Content/ComfyTexturesWidget.uasset",
+				"C:/Users/best/Downloads/ComfyTextures/Content/FirstPerson/Maps/FirstPersonMap.umap"
+			]
+		}
+	]
+}

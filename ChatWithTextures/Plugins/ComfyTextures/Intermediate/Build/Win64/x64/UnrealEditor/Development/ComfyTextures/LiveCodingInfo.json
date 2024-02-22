@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ComfyTextures.cpp.obj": [
+			"ComfyTextures.init.gen.cpp.obj",
+			"ComfyTexturesWidgetBase.gen.cpp.obj",
+			"ComfyTextures.cpp.obj",
+			"ComfyTexturesHttpClient.cpp.obj",
+			"ComfyTexturesWidgetBase.cpp.obj"
+		]
+	}
+}

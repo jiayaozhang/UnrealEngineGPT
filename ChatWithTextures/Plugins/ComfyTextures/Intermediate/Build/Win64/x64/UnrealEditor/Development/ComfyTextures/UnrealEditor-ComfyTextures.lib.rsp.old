@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-ComfyTextures.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\best\Downloads\ComfyTextures\Intermediate\Build\Win64\x64\MyProjectEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.obj"
+"C:\Users\best\Downloads\ComfyTextures\Plugins\ComfyTextures\Intermediate\Build\Win64\x64\UnrealEditor\Development\ComfyTextures\Module.ComfyTextures.cpp.obj"
+"C:\Users\best\Downloads\ComfyTextures\Plugins\ComfyTextures\Intermediate\Build\Win64\x64\UnrealEditor\Development\ComfyTextures\Default.rc2.res"
+/OUT:"C:\Users\best\Downloads\ComfyTextures\Plugins\ComfyTextures\Intermediate\Build\Win64\x64\UnrealEditor\Development\ComfyTextures\UnrealEditor-ComfyTextures.lib"
