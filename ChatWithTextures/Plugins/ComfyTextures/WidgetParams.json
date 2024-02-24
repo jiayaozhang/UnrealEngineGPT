@@ -3,7 +3,7 @@
 	{
 		"positive_prompt": "apartment interior, rundown, post apocalyptic, abandoned, old, professional photography, hyperrealistic, octane render, unreal engine 5, path tracing, soft lighting, high quality, highly detailed, 8 k, complementary colors, cgsociety",
 		"negative_prompt": "drawing, painting, anime, blur, blurry, depth of field, bloom, fog, haze",
-		"seed": 2042557312,
+		"seed": 1209569280,
 		"cfg": 2,
 		"steps": 6,
 		"refiner_steps": 0,
