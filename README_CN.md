@@ -253,14 +253,77 @@ python single_chat.py
 
 
 
-## InternLM大模型与虚幻引擎在线结合
+## 大模型与虚幻引擎结合 
 
-后期把虚幻引擎和UEGPT-Chat大模型联合，可以实时与"我的秘书"语音对话，之后会把虚幻的项目工程放出来
+😎保持关注!
 
-😎Stay tune!
+<img src="img/chatwithtexture.gif" width="450"> 
 
-<img src="img/metahuman.gif" width="450"> 
+## 安装流程
+
+### Setup ComfyUI
+
+1.  根据 [官方文档](https://github.com/comfyanonymous/ComfyUI?tab=readme-ov-file#installing) 安装 [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
+
+2. 下载以下链接里面的**所有**模型，并将他们放到ComfyUI的 `models`子文件下面.
 
 
+- `models/checkpoints/sd_xl_base_1.0_0.9vae.safetensors` - [下载](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/sd_xl_base_1.0_0.9vae.safetensors)
+- `models/checkpoints/sd_xl_refiner_1.0_0.9vae.safetensors` - [下载](https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/blob/main/sd_xl_refiner_1.0_0.9vae.safetensors)
+- `models/controlnet/diffusers_xl_canny_full.safetensors` - [下载](https://huggingface.co/lllyasviel/sd_control_collection/blob/main/diffusers_xl_canny_full.safetensors)
+- `models/controlnet/diffusers_xl_depth_full.safetensors` - [下载](https://huggingface.co/lllyasviel/sd_control_collection/blob/main/diffusers_xl_depth_full.safetensors)
+- `models/loras/lcm_lora_sdxl.safetensors` - [下载](https://huggingface.co/latent-consistency/lcm-lora-sdxl/blob/main/pytorch_lora_weights.safetensors) (Note: Rename the file to `lcm_lora_sdxl.safetensors`)
+- `models/upscale_models/4x-UltraSharp.pth` - [下载](https://huggingface.co/lokCX/4x-Ultrasharp/blob/main/4x-UltraSharp.pth)
+
+### 配置虚幻引擎
+
+1. 克隆此仓库
+
+2. 通过点击`MyProject.uproject` 并选择`Generate Visual Studio project files`来构建虚幻工程. 这样会在项目文件夹下面生成 `MyProject.sln`。然后在Visual Studio Community里面打开并鼠标右键点击 `Build -> Build Solution` 
+
+3. 双击 `MyProject.sln`打开项目
+
+4. 在`Project Settings -> Plugins -> Chat With Textures`把插件打开.
+
+5.  通过点击`Tools -> Editor Utility Widgets -> Chat With Texture`把插件打开.
+    
+如果在content目录下面没有`Chat With Texture`，那么你需要在`Plugins/Chat With Textures Content/` 里面打开，并鼠标右键`Run Utility Widget`从而使得它在蓝图里面运行。如果你没有在插件目录里面看到，那么你需要点击 `Settings`按钮，并勾选`Show Plugin Contents`
+
+# Usage
+
+确保Comfy UI打开并运行了
+
+1. 在视图界面里面点选你想要上材质的对象
+
+2. 在Chat With Texture Widget里面选择你想要的渲染模型
+
+3. 点击“渲染”去启动渲染流程
+
+注意:
+- 你的模型必须有UVs,自动生成的UV也行.
+- 对于每一个模型会自动生成新的材质贴图
 
 
+## Modes
+
+### Create
+
+这个模式会使用更快的SDXL LCM model为每一个模型去产生一个低分辨率的材质。使用快速迭代从而选中你最想要的场景模型
+
+### Refine
+
+这个模式会使用较慢的SDXL工作流程去精细化“Create”生成的低分辨率的贴图。“Refine”模式适合最终生成一个你最想要的模型
+
+### Edit
+
+这个模式下可以修改“Create"或者”Refine“下的材质，使用”Edit“模式可以修复任何瑕疵或者不理想的地方
+
+你可以选择两种编辑模式 `From Texture` 和`From Object`。`From Texture`可以让你通过Mesh Paint重新绘制不理想的地方到（255，0，255，255）准确地编辑
+
+## Editing the ComfyUI Workflows
+
+你可以在插件`Plugins/Chat With Textures/Content/Workflows/Original`的文件夹下面看到ComfyUI的工作流.
+
+通过导入JSONs在ComfyUI从而看到整个工作流并做出改变.通过做出自适应的调整后，可以在ComfyUI下点击 `Save (API Format)` 并复制这个JSON到相应的 `Plugins/Chat With Textures/Content/Workflows` 文件夹下面
+
+你需要先在ComfyUI里面勾选了 `Enable Dev mode Options`才能看到`Save (API Format)` 这个按钮
