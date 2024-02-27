@@ -290,13 +290,13 @@ The models directory is relative to the ComfyUI root directory i.e. `<ComfyUI Ro
 
 3. Open the project in the Unreal Engine editor.
 
-4. Configure the plugin by going to `Project Settings -> Plugins -> Comfy Textures`.
+4. Configure the plugin by going to `Project Settings -> Plugins -> Chat With Textures`.
 
     If you are running ComfyUI on a remote machine, you need to set the `Comfy Url` to the correct address.
 
-5. Open the plugin window by clicking on `Tools -> Editor Utility Widgets -> Comfy Textures Widget`.
+5. Open the plugin window by clicking on `Tools -> Editor Utility Widgets -> Chat With Texture`.
 
-    If the menu item is missing you need to open the `ComfyTexturesWidget` from the Content Browser in `Plugins/Comfy Textures Content/` and click `Run Utility Widget` in the blueprint editor.
+    If the menu item is missing you need to open the `Chat With Texture` from the Content Browser in `Plugins/Chat With Textures Content/` and click `Run Utility Widget` in the blueprint editor.
 
    If you don't see the Plugin folder in the Content Browser then click the `Settings` button on the top right of the Content Browser and make sure the `Show Plugin Contents` checkbox is enabled in the menu.
 
@@ -307,7 +307,7 @@ Make sure ComfyUI is up and running before proceeding.
 
 1. Select the actors you want to texture in the Outliner.
 
-2. Set your desired settings in the Comfy Textures widget.
+2. Set your desired settings in the Chat With Texture widget.
 
 3. Click `Render` to start the rendering process.
 
@@ -333,6 +333,6 @@ You can select from two edit modes - `From Texture` and `From Object`. `From Tex
 
 ## Editing the ComfyUI Workflows
 
-You can find the ComfyUI workflows used by the plugin in the `Plugins/ComfyTextures/Content/Workflows/Original` folder. Load the JSONs into ComfyUI to see the full workflow and make changes. After making changes, save the workflow using the `Save (API Format)` button in ComfyUI and copy the JSON to the corresponding file in the `Plugins/ComfyTextures/Content/Workflows` folder.
+You can find the ComfyUI workflows used by the plugin in the `Plugins/Chat With Textures/Content/Workflows/Original` folder. Load the JSONs into ComfyUI to see the full workflow and make changes. After making changes, save the workflow using the `Save (API Format)` button in ComfyUI and copy the JSON to the corresponding file in the `Plugins/Chat With Textures/Content/Workflows` folder.
 
 You need to have `Enable Dev mode Options` enabled in the ComfyUI settings to see the `Save (API Format)` button.
